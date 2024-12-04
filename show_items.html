@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage & Salt - Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headeri">
+            <h1 class="emri">Sage & Salt</h1>
+            <div class="linkk">
+                <a class="linqet" href="index.html">Home</a>
+                <a class="linqet scroll-link" href="aboutUs.html">About Us</a>
+                <a class="linqet" href="menu.html">Menu</a>
+                <a class="linqet scroll-link" href="contact.html">Contact Us</a>
+                <a class="linqet" href="register.html">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <button onclick="showCategory('breakfast')">Breakfast</button>
+        <button onclick="showCategory('brunch')">Brunch</button>
+        <button onclick="showCategory('lunch')">Lunch</button>
+        <button onclick="showCategory('dinner')">Dinner</button>
+    </nav>
+
+    <div class="food-menu" id="food-menu">
+        
+        <div class="food-item breakfast">
+            <img src="menuFotot/frutat.jpg" alt="Fruit Salad">
+            <p>Fruit Salad</p>
+        </div>
+        <div class="food-item breakfast">
+            <img src="menuFotot/omelet.jpg" alt="Omelet">
+            <p>Omelet</p>
+        </div>
+
+        
+        <div class="food-item brunch">
+            <img src="menuFotot/carbonara.jpg" alt="Spaghetti Carbonara">
+            <p>Spaghetti Carbonara</p>
+        </div>
+        <div class="food-item brunch">
+            <img src="menuFotot/egg.jpg" alt="Egg Sandwich">
+            <p>Egg Sandwich</p>
+        </div>
+
+        
+        <div class="food-item lunch">
+            <img src="menuFotot/burger.jpg" alt="Cheeseburger">
+            <p>Cheeseburger</p>
+        </div>
+        <div class="food-item lunch">
+            <img src="menuFotot/salad.jpg" alt="Caesar Salad">
+            <p>Caesar Salad</p>
+        </div>
+
+       
+        <div class="food-item dinner">
+            <img src="menuFotot/steak.jpg" alt="Grilled Steak">
+            <p>Grilled Steak</p>
+        </div>
+        <div class="food-item dinner">
+            <img src="menuFotot/pasta.jpg" alt="Pasta">
+            <p>Pasta</p>
+        </div>
+    </div>
+
+    <script>
+        function showCategory(category) {
+            const foodItems = document.getElementsByClassName('food-item');
+            
+            
+            for (let i = 0; i < foodItems.length; i++) {
+                foodItems[i].style.display = 'none';
+            }
+
+           
+            const selectedItems = document.getElementsByClassName(category);
+            for (let i = 0; i < selectedItems.length; i++) {
+                selectedItems[i].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
