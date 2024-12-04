@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage & Salt - Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headeri">
+            <h1 class="emri">Sage & Salt</h1>
+            <div class="linkk">
+                <a class="linqet" href="index.html">Home</a>
+                <a class="linqet scroll-link" href="aboutUs.html">About Us</a>
+                <a class="linqet" href="menu.html">Menu</a>
+                <a class="linqet scroll-link" href="index.html#contact-section">Contact Us</a>
+                <a class="linqet" href="register.html">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <button onclick="showCategory('breakfast')">Breakfast</button>
+        <button onclick="showCategory('brunch')">Brunch</button>
+        <button onclick="showCategory('lunch')">Lunch</button>
+        <button onclick="showCategory('dinner')">Dinner</button>
+    </nav>
+
+    <div class="food-menu" id="food-menu">
+        <!-- Breakfast Items -->
+        <div class="food-item" data-category="breakfast">
+            <img src="menuFotot/breakfast1.jpg" alt="Breakfast Item 1">
+            <p>Freshly made Pancakes with Maple Syrup, served with a side of mixed berries.</p>
+        </div>
+        <div class="food-item" data-category="breakfast">
+            <img src="menuFotot/breakfast2.jpg" alt="Breakfast Item 2">
+            <p>Classic scrambled eggs with smoked salmon and toast, topped with fresh herbs.</p>
+        </div>
+        <div class="food-item" data-category="breakfast">
+            <img src="menuFotot/breakfast3.jpg" alt="Breakfast Item 3">
+            <p>Granola with yogurt and seasonal fruits, a healthy start to your day.</p>
+        </div>
+
+        <!-- Brunch Items -->
+        <div class="food-item" data-category="brunch">
+            <img src="menuFotot/brunch.jpg" alt="Brunch Item 1">
+            <p>Avocado toast with poached eggs, cherry tomatoes, and a drizzle of olive oil.</p>
+        </div>
+        <div class="food-item" data-category="brunch">
+            <img src="menuFotot/brunch2.jpg" alt="Brunch Item 2">
+            <p>Sweet French Toast with a dusting of powdered sugar, served with maple syrup and berries.</p>
+        </div>
+        <div class="food-item" data-category="brunch">
+            <img src="menuFotot/brunch3.jpg" alt="Brunch Item 3">
+            <p>Quiche Lorraine with a side salad, featuring a buttery crust and a rich egg filling.</p>
+        </div>
+
+        <!-- Lunch Items -->
+        <div class="food-item" data-category="lunch">
+            <img src="menuFotot/lunch.jpg" alt="Lunch Item 1">
+            <p>Grilled Chicken Caesar Salad with homemade croutons and Caesar dressing.</p>
+        </div>
+        <div class="food-item" data-category="lunch">
+            <img src="menuFotot/lunch2.jpg" alt="Lunch Item 2">
+            <p>Roasted vegetable sandwich with hummus on whole-grain bread, served with a side of chips.</p>
+        </div>
+        <div class="food-item" data-category="lunch">
+            <img src="menuFotot/lunch3.jpg" alt="Lunch Item 3">
+            <p>Beef burger with caramelized onions, melted cheese, and a side of seasoned fries.</p>
+        </div>
+
+        <!-- Dinner Items -->
+        <div class="food-item" data-category="dinner">
+            <img src="menuFotot/dinner.jpg" alt="Dinner Item 1">
+            <p>Pan-seared salmon fillet with a citrus glaze, served with roasted potatoes and seasonal vegetables.</p>
+        </div>
+        <div class="food-item" data-category="dinner">
+            <img src="menuFotot/dinner2.jpg" alt="Dinner Item 2">
+            <p>Grilled steak with garlic butter, accompanied by mashed potatoes and a side of grilled asparagus.</p>
+        </div>
+        <div class="food-item" data-category="dinner">
+            <img src="menuFotot/dinner3.jpg" alt="Dinner Item 3">
+            <p>Vegetarian pasta with a rich tomato and basil sauce, topped with parmesan cheese.</p>
+        </div>
+    </div>
+
+    <script>
+        function showCategory(category) {
+            const foodMenu = document.getElementById('food-menu');
+            const items = foodMenu.getElementsByClassName('food-item');
+
+            // Fshi të gjitha artikujt
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.display = 'none';
+            }
+
+            // Trego artikujt që përkasin me kategorinë e zgjedhur
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].getAttribute('data-category') === category) {
+                    items[i].style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
