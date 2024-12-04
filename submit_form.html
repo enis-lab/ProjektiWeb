@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma Spektakolare</title>
+    <style>
+        /* Sfond dhe përqendrim */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6d5bde, #c9a7eb);
+            color: #fff;
+        }
+
+        /* Kutia e formës */
+        .form-container {
+            background: #ffffff;
+            color: #333;
+            border-radius: 15px;
+            padding: 30px 40px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Titulli dhe përshkrimi */
+        .form-container h1 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .form-description {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: #777;
+        }
+
+        /* Grupet e inputeve */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #6d5bde;
+            outline: none;
+        }
+
+        /* Butoni */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6d5bde, #7b88d1);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #5c49bd, #6b7ac1);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Regjistrohu</h1>
+        <p class="form-description">Plotëso formularin për të filluar udhëtimin tënd.</p>
+        <form>
+            <div class="input-group">
+                <label for="name">Emri i Plotë</label>
+                <input type="text" id="name" placeholder="Shkruaj emrin tënd" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Shkruaj email-in tënd" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Fjalëkalimi</label>
+                <input type="password" id="password" placeholder="Zgjidh një fjalëkalim të sigurt" required>
+            </div>
+            <button type="submit" class="btn">Dërgo</button>
+        </form>
+    </div>
+</body>
+</html>
